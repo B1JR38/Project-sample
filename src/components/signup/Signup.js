@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Footer';
 import './signup.css';
 
 const Signup = () => {
@@ -24,6 +25,9 @@ const Signup = () => {
                 <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password"></input><br />
             </form>
             <button className="button"><span>Submit </span></button>
+            <div className="footer">
+                <Footer />
+            </div>
             </div>  
         </div>
     </div> 

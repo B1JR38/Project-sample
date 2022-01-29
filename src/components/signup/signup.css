@@ -72,10 +72,11 @@ input{
   }
 
 .button{
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     font-family: Montserrat,serif;
+    margin-top: 5px;
     font-size: 18px;
     font-weight: 700;
     color: #3cf;
