@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Button from '../web components/buttons/Button';
 import './signup.css';
 
 const Signup = () => {
@@ -24,7 +25,7 @@ const Signup = () => {
                 <input type="password" name="password" id="password" placeholder="Password"></input><br />
                 <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password"></input><br />
             </form>
-            <button className="button"><span>Submit </span></button>
+            <Button BtnName={"Submit"} />
             <footer className='footer'>
                 <p>Already a user? <Link to='/' className='link'>Login</Link></p>
             </footer>
