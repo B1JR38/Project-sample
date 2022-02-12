@@ -79,3 +79,11 @@ input{
     color: #11b63a;
     font-size:120%;
 }
+
+.form-btn{
+    padding-left: 90px;
+}
+
+.pwd-validation{
+    color: red;
+}

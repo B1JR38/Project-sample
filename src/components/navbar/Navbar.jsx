@@ -1,28 +1,41 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './navbar.css';
 
+import React from 'react';
+import {
+  Nav,
+  NavLink,
+  Bars,
+  NavMenu,
+} from './NavbarElements';
+
+  
 const Navbar = () => {
+    const divStyle = {
+        width: '8%',
+        height:'50px',
+        float: 'left',
+      };
+      
   return (
-      <nav className="navbar">
-        <div className="nav-header">
-            Admission Portal
-        </div> 
-        <div className="nav-item-list">
-        <ul className='topnav'>
-            <li>
-                <Link className='nav-item active' to="/">Home</Link>
-            </li>
-            <li>
-                <Link className='nav-item' to="/login" >Login</Link>
-            </li>
-            <li>
-                <Link className='nav-item' to="/signup">Signup</Link>
-            </li>
-        </ul>
-        </div>
-      </nav>
+    <>
+      <Nav>
+      <img className='nav-logo' src={require('../navbar/admissionlogo.jpg')} alt="" style={divStyle} />
+        <Bars />
+        <NavMenu>
+          <NavLink to='/' activeStyle>
+            Home
+          </NavLink>
+          <NavLink to='/signup' activeStyle>
+            Sign Up
+          </NavLink>
+          <NavLink to='/login' activeStyle>
+            Log In
+          </NavLink>
+          {/* Second Nav */}
+          {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
+        </NavMenu>
+      </Nav>
+    </>
   );
 };
-
+  
 export default Navbar;

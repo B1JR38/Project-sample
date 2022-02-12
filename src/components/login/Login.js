@@ -16,8 +16,10 @@ const Signup = () => {
             <form>
                 <input type="email" name="email" id="email" placeholder="Enter email"></input><br />
                 <input type="password" name="password" id="password" placeholder="Password"></input><br />
+                <div className="form-btn">
+                    <Button BtnName={"Login"} />
+                </div>
             </form>
-            <Button BtnName={"Login"} />
             <footer className='footer'>
                 <p>Not a user? <Link to='/signup' className='link'>Sign up</Link></p>
             </footer>
