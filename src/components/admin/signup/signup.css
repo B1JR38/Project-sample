@@ -84,6 +84,11 @@ input{
     padding-left: 90px;
 }
 
+.form-btn{
+    padding-left: 90px;
+}
+
+
 .pwd-validation{
     color: red;
 }
