@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import Button from '../../web components/buttons/Button';
 import './signup.css';
 
@@ -50,7 +51,16 @@ const Signup = () => {
     localStorage.setItem('usersdata',JSON.stringify(users));
     event.preventDefault();
   }
-    
+  let navigate = useNavigate();
+  const handleChange = (event) =>{
+    if(valuee.select==='Admin'){
+        navigate('/admin/signup',{ replace:true });
+    }
+    if(valuee.select==='User'){
+        navigate('/user/signup',{ replace:true });
+    }
+  }
+
   return (
     <div className="main-container">
         <div className='signup-container'>
@@ -60,7 +70,7 @@ const Signup = () => {
             <div className="form-span"></div>
             <div className="form-input-container">
             <form onSubmit={submitting}>
-                <select className='select' name="select" id="admin/user" defaultValue="" onChange={assignValues}>
+                <select className='select' name="select" id="admin/user" defaultValue="" onChange={assignValues} onClick={handleChange}>
                     <option className='placeHolder' hidden value="">Enter admin/user</option>
                     <option name="select" value="Admin" >Admin</option>
                     <option name="select" value="User">User</option>

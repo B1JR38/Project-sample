@@ -9,6 +9,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
   padding: 0.2rem calc((100vw - 1000px) / 2);
   z-index: 12;
+  box-shadow:0px 0px 15px 0px #102325;
   /* Third Nav */
   /* justify-content: flex-start; */
 `;
