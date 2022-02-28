@@ -17,7 +17,7 @@ const Signup = () => {
                 <input type="email" name="email" id="email" placeholder="Enter email"></input><br />
                 <input type="password" name="password" id="password" placeholder="Password"></input><br />
                 <div className="form-btn">
-                    <Button BtnName={"Login"} />
+                    <Button BtnName={"Login"}  />
                 </div>
             </form>
             <footer className='footer'>

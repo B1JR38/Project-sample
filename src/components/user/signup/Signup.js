@@ -56,7 +56,7 @@ const Signup = () => {
     if(valuee.select==='Admin'){
         navigate('/admin/signup',{ replace:true });
     }
-    if(valuee.select==='User'){
+    else if(valuee.select==='User'){
         navigate('/user/signup',{ replace:true });
     }
   }
