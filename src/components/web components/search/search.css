@@ -7,12 +7,16 @@
     margin-bottom: 1.5rem;
   }
   
-  .search input{
+ .search input{
     border: none;
     resize: none;
+    width: 250px;
     background-color: rgb(223, 223, 223);
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
   }
   
   .search input:focus{
-    outline: none;
+    outline:center;
+    width: 100%;
   }
