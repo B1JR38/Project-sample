@@ -1,5 +1,6 @@
-.i-list{
+.institutelistmodel{
     display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
   }
