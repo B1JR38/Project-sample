@@ -1,8 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
 import Rating from '@mui/material/Rating';
-import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
 import './institute.css';
 
 const Institute = () => {
