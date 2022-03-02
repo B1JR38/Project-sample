@@ -5,10 +5,12 @@ import InstituteList from '../../web components/instituteList/InstituteList';
 const InstitutePage = () => {
   
   return (
-     <> 
-        <Search />
+    <div className='institutepgedesign'>
+      <Search />
+
         <InstituteList />
-    </>
+      
+      </div>
   )
 }
 
