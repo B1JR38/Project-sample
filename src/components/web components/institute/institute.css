@@ -25,17 +25,3 @@
     align-items: center;
     justify-content: space-between;
 }
-
-.i-footer {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-  }
-  
-.edit-icon{
-    cursor: pointer;
-}
-
-.delete-icon{
-    cursor: pointer;
-}
