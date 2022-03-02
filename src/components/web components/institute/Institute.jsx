@@ -15,10 +15,6 @@ const Institute = () => {
       </div>
       <div className="i-sline">
         Place: I-place      
-        <div className="i-footer">
-            <EditIcon className='edit-icon' />
-            <DeleteIcon className='delete-icon' />
-        </div>
       </div>
 
     </div>
