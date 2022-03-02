@@ -4,11 +4,12 @@ import './instituteList.css';
 
 const InstituteList = () => {
   return (
-    <div className='i-list'>
+   <div className='institutelistmodel'>
         <Institute />
         <Institute />
         <Institute />
-        <Institute />
+        
+
     </div>
   )
 }
