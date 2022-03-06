@@ -1,33 +1,31 @@
+import React from "react";
+import { Nav, NavLink, Bars, NavMenu } from "./NavbarElements";
 
-import React from 'react';
-import {
-  Nav,
-  NavLink,
-  Bars,
-  NavMenu,
-} from './NavbarElements';
-
-  
 const Navbar = () => {
-    const divStyle = {
-        width: '8%',
-        height:'50px',
-        float: 'left',
-      };
-      
+  const divStyle = {
+    width: "8%",
+    height: "50px",
+    float: "left",
+  };
+
   return (
     <>
       <Nav>
-      <img className='nav-logo' src={require('../navbar/admissionlogo.jpg')} alt="" style={divStyle} />
+        <img
+          className="nav-logo"
+          src={require("../navbar/admissionlogo.jpg")}
+          alt=""
+          style={divStyle}
+        />
         <Bars />
         <NavMenu>
-          <NavLink to='/' activeStyle>
+          <NavLink to="/" activeStyle>
             Home
           </NavLink>
-          <NavLink to='/user/signup' activeStyle>
+          <NavLink to="/user/signup" activeStyle>
             Sign Up
           </NavLink>
-          <NavLink to='/login' activeStyle>
+          <NavLink to="/login" activeStyle>
             Log In
           </NavLink>
           {/* Second Nav */}
@@ -37,5 +35,5 @@ const Navbar = () => {
     </>
   );
 };
-  
+
 export default Navbar;
