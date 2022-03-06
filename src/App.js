@@ -10,6 +10,7 @@ import './App.css';
 import Navbar from './components/navbar/Navbar';
 import Home from './components/home/Home';
 import InstitutePage from './components/user/institutepage/InstitutePage';
+import Enrolledcourse from './components/user/enrolledcourse/enrolledCourse'; 
 
 function App() {
   const success = () => toast.success('Login Successful!!')
@@ -26,6 +27,7 @@ function App() {
              <Route path='/user/signup' element={<Signup/>} success={success} fail={fail} />
              <Route path='/login' element={<Login/>} success={success} fail={fail} />
              <Route path='/user/institutepage' element={<InstitutePage/>}  />
+             <Route path='/user/enrolledcourse' element={<Enrolledcourse/>}  />
            </Routes>
          </div>
        </div>
