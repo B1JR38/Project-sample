@@ -1,4 +1,3 @@
-import { Button } from '@mui/material';
 import React from 'react'
 import './enrolledcourse.css';
 
@@ -11,7 +10,7 @@ const Enrolledcourse = () => {
         Course End Date :dd/mm/yyyy<br></br>
         </h1>
     <div className='button-alignment'>
-        <button className='enrollbutton'>Mylearning</button>
+        <button className='enrollbutton'>My Learning</button>
         </div>
         </div>
       

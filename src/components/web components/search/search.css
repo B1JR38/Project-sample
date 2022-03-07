@@ -9,8 +9,11 @@
   
  .search input{
     border: none;
+    padding-top: 6px;
     resize: none;
     width: 250px;
+    outline: none;
+    color: black;
     background-color: rgb(223, 223, 223);
     -webkit-transition: width .35s ease-in-out;
     transition: width .35s ease-in-out;

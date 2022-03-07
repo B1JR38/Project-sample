@@ -6,7 +6,7 @@
     padding: 2rem;
     width: 500px;
     height:200px;
-    background-color: grey;
+    background-color: #25274d;
     border-radius: 10px;
     font-family: serif;
     color: whitesmoke;
@@ -14,11 +14,11 @@
 }
 
 .enrollbutton {
-  background-color: red;
+  background-color: rgb(99, 10, 10);
   color:white;
   font-size: 20px;
   padding: 5px 10px;
-  border:none;
+  border-radius:5px;
   cursor: pointer;
 
 }
