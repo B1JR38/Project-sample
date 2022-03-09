@@ -1,0 +1,33 @@
+.search-field{
+    display: block;
+    margin-top: 8%;
+    margin-left: 35%;
+}
+.s-field{
+    height:36px;
+}
+.form-institute{
+    display: flex;
+    margin-top: 10%;
+    margin-left: 40%;
+}
+.form-btn{
+    margin-left: 30%;
+}
+#f-addinst{
+    margin-top: 25%;
+    margin-left: 80%;
+    border: 5px solid black;
+    border-radius: 10px;
+    margin-right: 9%;
+    background-color: whitesmoke;
+    margin-top: 40%;
+}
+#f-editinst{
+    margin-top: 25%;
+    margin-left: 70%;
+    border: 5px solid black;
+    border-radius: 10px;
+    margin-right: 9%;
+    background-color: whitesmoke;
+}

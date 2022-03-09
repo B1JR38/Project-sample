@@ -10,7 +10,7 @@ const Enrolledcourse = () => {
         Course End Date :dd/mm/yyyy<br></br>
         </h1>
     <div className='button-alignment'>
-        <button className='enrollbutton'>My Learning</button>
+        <button className='enrollbutton' id='enrollbutton'>My Learning</button>
         </div>
         </div>
       
