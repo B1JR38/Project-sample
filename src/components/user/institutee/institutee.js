@@ -8,8 +8,6 @@ const InstitutePagee=()=>{
     const searchfilter=(event)=>{
         setfilter(event.target.value);
     }
-    // console.log(data);
-    // console.log(data.instituteData)
     const displaysearch=filter.length>0;
     const dataSearch=data.instituteData.filter((val)=>{
         return(val.name.includes(filter))
