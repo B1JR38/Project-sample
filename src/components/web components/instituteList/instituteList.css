@@ -1,0 +1,7 @@
+.institutelistmodel{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    overflow:auto;
+    grid-gap: 10px;
+    padding: 10px;
+  }

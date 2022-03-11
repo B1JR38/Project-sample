@@ -1,0 +1,57 @@
+.search{
+    padding-left: 35%;
+}
+.institutepgedesign
+{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: auto;
+}
+.institutelistmodel{
+    /* display: grid;
+    grid-template-columns: auto auto auto auto;
+    /* overflow:auto; */
+    /* grid-gap: 10px;*/
+    overflow: auto;
+    display:inline-flex;
+    width:auto;
+    padding:10px;
+    margin:10px;
+    justify-content: space-between;
+}
+.i-container{
+    /* overflow: auto; */
+    justify-content: space-between;
+    white-space: pre-wrap;
+    padding: 1rem;
+    width: 300px;
+    height:200px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.img{
+    border-radius: 5px;
+}
+
+.i-fline{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.i-sline{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .s-field {
+
+    height: 36px;
+    width: 80%;
+    padding-left:100%;
+    padding-right: 10%;
+  } */
