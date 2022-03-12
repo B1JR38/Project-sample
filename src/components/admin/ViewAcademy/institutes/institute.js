@@ -2,8 +2,8 @@ import React from 'react';
 import { Link , useHistory} from 'react-router-dom';
 import Button from '../../web components/buttons/Button';
 import './institute.css'
-import {Card,CardGroup} from '@material-ui/core/Card'
-import AddInstitute from './AddInstitute';
+//import {Card,CardGroup} from '@material-ui/core/Card'
+//import AddInstitute from './AddInstitute';
 
 
 const Institute = () => {
