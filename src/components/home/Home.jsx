@@ -8,7 +8,7 @@ const Home = () => {
   <div className='home'>
         <Typewriter
               options={{
-                strings: ['Welcome! to Admission Portal', 'By Virtusa Consultancy Pvt. Ltd.', 'Browse Instituitions!', 'Browse Courses!', 'Learn'],
+                strings: ['Welcome! to Admission Portal', 'Browse Instituitions!', 'Browse Courses!', 'Learn'],
                 autoStart: true,
                 loop: true,
               }}
