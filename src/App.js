@@ -9,7 +9,7 @@ import './App.css';
 // test import InstituteList from './components/web components/instituteList/InstituteList';
 import Navbar from './components/navbar/Navbar';
 import Home from './components/home/Home';
-import InstitutePage from './components/user/institutepage/InstitutePage';
+import InstitutePagee from './components/user/institutee/institutee';
 import Enrolledcourse from './components/user/enrolledcourse/enrolledCourse'; 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
              <Route path='/admin/signup' element={<AdminSignup/>} success={success} fail={fail} />
              <Route path='/user/signup' element={<Signup/>} success={success} fail={fail} />
              <Route path='/login' element={<Login/>} success={success} fail={fail} />
-             <Route path='/user/institutepage' element={<InstitutePage/>}  />
+             <Route path='/user/institutepage' element={<InstitutePagee/>}  />
              <Route path='/user/enrolledcourse' element={<Enrolledcourse/>}  />
            </Routes>
          </div>

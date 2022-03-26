@@ -29,18 +29,6 @@
     box-shadow:0px 0px 10px 0px #102325;
 }
 
-.select{
-    font-size:20px;
-    float:left;
-    color: #feffff;
-    background-color: #25274d;
-    width:305px;
-    height: 35px;
-    margin-bottom:10px;
-    border:1px solid #feffff;
-    border-radius:4px;
-  }
-
 .placeHolder{
     color: #feffff;
     font-family: Montserrat,serif;
@@ -51,7 +39,7 @@ input{
   float:left;
   color: #feffff;
   background-color: #25274d;
-  width:310px;
+  width:300px;
   height: 30px;
   margin-bottom:10px;
   border:1px solid #feffff;
@@ -80,15 +68,24 @@ input{
     font-size:120%;
 }
 
-.form-btn{
-    padding-left: 90px;
+.form-btn1{
+    padding-left: 0px;
+    margin-left: 45%;
+}
+.card-container{
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+}
+.form1{
+    display: inline-block;
+    margin-left: 20%;
+    margin-top: 5%;
+    margin-right: 13%;
+}
+.form2{
+    display: inline-block;
 }
 
-.form-btn{
-    padding-left: 90px;
-}
-
-
-.pwd-validation{
-    color: red;
-}
