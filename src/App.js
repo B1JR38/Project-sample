@@ -19,13 +19,24 @@ import EditInstitute from "./components/admin/ViewAcademy/institutes/EditInstitu
 import Availablecourse from "../src/components/user/availablecourse/availablecourse";
 import Availablecourses from "./components/admin/availablecourse/availablecourse";
 import AddCourse from './components/admin/availablecourse/institutes/AddCourse';
-import EditCourse from './components/admin/availablecourse/institutes/EditCourse';
-
+import EditCourse from './components/admin/availablecourse/institutes/EditCourse
 import { Switch } from '@mui/material';
+import Enrolledcourse from './components/user/enrolledcourse/enrolledCourse'; 
+//import useToken from './components/web components/token/useToken';
+//import Course from './components/admin/ViewAcademy/Enrolledcourse/Course'
+import Institute from './components/admin/ViewAcademy/institutes/Institute';
 
 function App() {
   const success = () => toast.success('Login Successful!!')
   const fail = (err) => toast.error(err)
+
+/*
+  const { token, setToken } = useToken();
+
+  if(!token) {
+    return <Login setToken={setToken} />
+  }
+*/
   return (
      <>
      <Router>
@@ -49,6 +60,8 @@ function App() {
             <Route path="/availablecourse" element={<Availablecourses/>} />
             <Route path="/addcourse" element={<AddCourse/>}/>
             <Route path="/editcourse" element={<EditCourse/>}/>
+             <Route path='/admin/institute' element={<Institute />}  />
+
            </Routes>
            {/* </Switch> */}
          </div>

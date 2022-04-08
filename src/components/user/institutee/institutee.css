@@ -1,8 +1,10 @@
+
 .Navbar{
     position:sticky;
     padding-top: 0px;
     align-items: center;
 }
+
 .container{
     display: flex;
     justify-content: center;
@@ -71,6 +73,7 @@ a:hover{
 .button{
     margin-left: 10px;
     height:43px;
+
 }
 .Navbar2{
     display: flex;
@@ -95,4 +98,5 @@ a:hover{
     color:#3cf;
     padding:7px;
     
+
 }
