@@ -57,7 +57,7 @@ const Signup = () => {
         navigate('/admin/signup',{ replace:true });
     }
     else if(valuee.select==='User'){
-        navigate('/user/signup',{ replace:true });
+        navigate('/',{ replace:true });
     }
   }
 
@@ -82,7 +82,8 @@ const Signup = () => {
                 <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" value={valuee.confirmPassword} onChange={confPassword}></input><br />
                 {valuee.password!==valuee.confirmPassword && <span className='pwd-validation'>{validation}</span>}
                 <div className="form-btn">
-                    <Button className="button" BtnName={"Submit"} value="submit" />
+                {/* <Button className="button" BtnName={"Submit"} value="submit" /> */}
+                <button className='button' onClick={()=>{alert()}}><span>{'SignUp'} </span></button>
                 </div>
             </form>
             {/* <Button BtnName={"Submit"} state={state} /> */}

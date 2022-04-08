@@ -4,7 +4,9 @@ import Button from '../web components/buttons/Button';
 import './login.css';
 
 const Signup = () => {
-
+    const login=()=>{
+        alert();
+    }
   return (
     <div className="main-container">
         <div className='signup-container'>
@@ -16,8 +18,11 @@ const Signup = () => {
             <form>
                 <input type="email" name="email" id="email" placeholder="Enter email"></input><br />
                 <input type="password" name="password" id="password" placeholder="Password"></input><br />
+                {/* <div className="form-btn">
+                    <Button BtnName={"Login"}  onChange={login}/>
+                </div> */}
                 <div className="form-btn">
-                    <Button BtnName={"Login"}  />
+                <button className='button' onClick={login}><span>{'login'} </span></button>
                 </div>
             </form>
             <footer className='footer'>

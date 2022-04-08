@@ -5,13 +5,13 @@ const data = {
         img: institute1,
         name: 'institute1',
         place: 'place1',
-        rating: 2
+        rating: 3
     },
     {
         img: institute1,
         name: 'institute2',
         place: 'place2',
-        rating:3
+        rating: 2
     },
     {
         img: institute1,
@@ -29,7 +29,7 @@ const data = {
         img: institute1,
         name: 'institute3',
         place: 'place3',
-        rating: 4
+        rating: 3
     },
     {
         img: institute1,
