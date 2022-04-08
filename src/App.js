@@ -11,21 +11,21 @@ import Navbar from './components/navbar/Navbar';
 import Home from './components/home/Home';
 import InstitutePagee from './components/user/institutee/institutee';
 import Enrolledcourse from './components/user/enrolledcourse/enrolledCourse'; 
-import useToken from './components/web components/token/useToken';
-import Course from './components/admin/ViewAcademy/Enrolledcourse/course';
-import Institute from './components/admin/ViewAcademy/institutes/institute';
+//import useToken from './components/web components/token/useToken';
+//import Course from './components/admin/ViewAcademy/Enrolledcourse/Course'
+import Institute from './components/admin/ViewAcademy/institutes/Institute';
 
 function App() {
   const success = () => toast.success('Login Successful!!')
   const fail = (err) => toast.error(err)
 
-
+/*
   const { token, setToken } = useToken();
 
   if(!token) {
     return <Login setToken={setToken} />
   }
-
+*/
   return (
      <>
      <Router>
@@ -39,8 +39,7 @@ function App() {
              <Route path='/login' element={<Login/>} success={success} fail={fail} />
              <Route path='/user/institutepage' element={<InstitutePagee/>}  />
              <Route path='/user/enrolledcourse' element={<Enrolledcourse/>}  />
-             <Route path='/admin/enrolledcourse' element={<Course />}  />
-             <Route path='/admin/institue' element={<Institute />}  />
+             <Route path='/admin/institute' element={<Institute />}  />
            </Routes>
          </div>
        </div>

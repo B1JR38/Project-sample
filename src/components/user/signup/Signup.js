@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
+import usersignupService from '../../../services/usersignupService';
 import Button from '../../web components/buttons/Button';
 import './signup.css';
 
@@ -50,6 +51,9 @@ const Signup = () => {
     console.log(state);
     localStorage.setItem('usersdata',JSON.stringify(users));
     event.preventDefault();
+    usersignupService.createUser(users).then(res =>{
+        this.props.history.push('/user/signup')
+    });
   }
   let navigate = useNavigate();
   const handleChange = (event) =>{
