@@ -19,7 +19,7 @@ const Navbar = () => {
     <>
       <Nav>
       <img className='nav-logo' src={require('../navbar/admissionlogo.jpg')} alt="" style={divStyle} />
-        <Bars />
+        {/* <Bars /> */}
         <NavMenu>
           <NavLink to='/' activeStyle>
             Home

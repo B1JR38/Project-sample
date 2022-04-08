@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom';
 import Button from '../web components/buttons/Button';
 import './login.css';
 
+
+const Signup = () => {
+    const login=()=>{
+        alert();
+    }
+
 async function loginUser(credentials) {
     return fetch('http://localhost:8080/login', {
       method: 'POST',
@@ -29,6 +35,7 @@ const Login = ({ setToken }) => {
         setToken(token);
       }
 
+
   return (
     <div className="main-container">
         <div className='signup-container'>
@@ -37,11 +44,20 @@ const Login = ({ setToken }) => {
             </div>
             <div className="form-span"></div>
             <div className="form-input-container">
+
+            <form>
+                <input type="email" name="email" id="email" placeholder="Enter email"></input><br />
+                <input type="password" name="password" id="password" placeholder="Password"></input><br />
+                {/* <div className="form-btn">
+                    <Button BtnName={"Login"}  onChange={login}/>
+                </div> */}
+
             <form onSubmit={handleSubmit}>
                 <input type="email" name="email" id="email" placeholder="Enter email" onChange={e => setEmail(e.target.value)}></input><br />
                 <input type="password" name="password" id="password" placeholder="Password" onChange={e => setPassword(e.target.value)}></input><br />
+
                 <div className="form-btn">
-                    <Button BtnName={"Login"}  />
+                <button className='button' onClick={login}><span>{'login'} </span></button>
                 </div>
             </form>
             <footer className='footer'>
