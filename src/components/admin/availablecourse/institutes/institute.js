@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link , useHistory} from 'react-router-dom';
+import { Link , useNavigate} from 'react-router-dom';
 import Button from '../../../web components/buttons/Button';
 import './institute.css'
 import Input from "../../../web components/input/Input";

@@ -1,5 +1,5 @@
-import React , {useState} from 'react';
-import { Link , useHistory} from 'react-router-dom';
+import React , {useState,useEffect} from 'react';
+import { Link , useNavigate} from 'react-router-dom';
 import { FaEdit , FaTrash } from 'react-icons/fa';
 import '../institutee/institutee.css';
 import Rating from '@mui/material/Rating';
@@ -7,16 +7,36 @@ import Button from "../../web components/buttons/Button";
 import data from './data';
 import EditInstitute from '../ViewAcademy/institutes/EditInstitute';
 import Navbar from '../../navbar/Navbar'
+import InstituteService from '../services/InstituteService';
 const InstitutePage=()=>{
+    const[institutes,setinstitutes]=useState([]);
     const[filter,setfilter]=useState("");
-    const searchfilter=(event)=>{
-        setfilter(event.target.value);
+    const history=useNavigate();
+    const editinstitute=()=>{
+            history('/editinstitute');
     }
+    const deleteinstitute=()=>{
+        alert('institute deleted');
+    }
+    const addinstitute=()=>{
+        history('/addinstitute',{replace:true});
+    }
+    // const searchfilter=(event)=>{
+    //     setfilter(event.target.value);
+    // }
+    useEffect(()=>{
+        InstituteService.getInstitute().then((res)=>{
+            setinstitutes({institutes:res.data});
+        });
+    });
     //const displaysearch=filter.length>0;
-    const dataSearch=data.instituteData.filter((val)=>{
-        return(val.name.includes(filter))
-    })
+
+    // const dataSearch=data.instituteData.filter((val)=>{
+    //     return(val.name.includes(filter))
+    // })
+
     // console.log(dataSearch);
+    
     return(
         <div>
         <div className='Navbar2'>
@@ -26,11 +46,12 @@ const InstitutePage=()=>{
         </div>
         <div className='instpage'>
         <div className='search'>
-                <input className='searchtext' type="text" placeholder='Search Here' value={filter} onChange={searchfilter}></input>
+                {/* <input className='searchtext' type="text" placeholder='Search Here' value={filter} onChange={searchfilter}></input> */}
+                <input className='searchtext' type="text" placeholder='Search Here'></input>
                 <Button className='button' BtnName='Search' value='Search' />
             </div>
         <section className='container'>
-            {dataSearch.map((item)=>{
+            {institutes.map((item)=>{
                 return(
                     <div>
                     <div className='card' key={item}>
@@ -38,8 +59,10 @@ const InstitutePage=()=>{
                     <center><a href='#0'>{item.name}</a></center>
                     <div className='rating'>
                         <p>Place:{item.place}</p>
-                        <Link to='/editInstitute' className='link'><FaEdit/></Link>
-                        <Link to='#' className='link'><FaTrash/></Link>
+                        {/* <Link to='admin/editinstitute' className='link'><FaEdit/></Link> */}
+                        <FaEdit onClick={editinstitute} style={{cursor:'pointer'}}/>
+                        <FaTrash onClick={deleteinstitute} style={{cursor:'pointer'}}/>
+                        {/* <Link to='#' className='link'><FaTrash/></Link> */}
                         <Rating name="size-small" defaultValue={item.rating} size="small" />
                     </div>
                     
@@ -50,9 +73,10 @@ const InstitutePage=()=>{
             
         </section>
         <div className='button2'>
-            <Link to="/addInstitute">
+            {/* <Link to="/addinstitute">
             <Button className="link" BtnName={"Add"} id="f-addinst" />
-            </Link>
+            </Link> */}
+            <button className='button' onClick={addinstitute}><span>{'Add'} </span></button>
         </div>
         </div>
         </div>

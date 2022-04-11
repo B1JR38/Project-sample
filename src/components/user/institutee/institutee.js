@@ -1,15 +1,11 @@
 import React , {useState} from 'react';
-import { Link , useHistory} from 'react-router-dom';
-
+import { Link , useNavigate} from 'react-router-dom';
 import '../institutee/institutee.css';
 import Rating from '@mui/material/Rating';
 import Button from "../../web components/buttons/Button";
 import data from './data';
-
 import Navbar from '../../navbar/Navbar'
 import Enrolledcourse from '../enrolledcourse/enrolledCourse'
-
-
 const InstitutePagee=()=>{
     const[filter,setfilter]=useState("");
     const searchfilter=(event)=>{
@@ -21,7 +17,6 @@ const InstitutePagee=()=>{
     })
     // console.log(dataSearch);
     return(
-
         <div>
         <div className='Navbar2'>
             <Link to='/user/institutepage' className='instnav'>Institutes</Link>
@@ -38,17 +33,10 @@ const InstitutePagee=()=>{
                     <div>
                     <div className='card' key={item}>
                     <img className='img instimg' src={item.img} alt="Institute"/>
-
                     <center><a><Link to='/user/availablecourse' className='link'>{item.name}</Link></a></center>
                     <div className='rating'>
                         <p>Place:{item.place}</p>
                         <Rating name="size-small" defaultValue={item.rating} size="small" />
-
-                    <center><a href='#0'>{item.name}</a></center>
-                    <div className='rating'>
-                        <p>Place:{item.place}</p>
-                        <Rating name="size-small" defaultValue={2} size="small" />
-
                     </div>
                     
                 </div>
@@ -59,9 +47,7 @@ const InstitutePagee=()=>{
             
         </section>
         </div>
-
         </div>
-
     )
 }
 export default InstitutePagee;

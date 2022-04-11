@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 // import { FaAngellist, FaGenderless, FaHandScissors } from 'react-icons/fa'
 // import {Link} from 'react-router-dom'
-import Button from "../../../web components/buttons/Button.jsx";
-import Input from "../../../web components/input/Input.jsx";
+import Button from "../../web components/buttons/Button";
+import Input from "../../web components/input/Input.jsx";
 import "./course.css";
 
-const Course = () => {
+const EnrollCourse = () => {
   const [valuee, setValue] = useState({
     firstName: "",
     lastName: "",
@@ -236,4 +236,4 @@ const Course = () => {
   );
 };
 
-export default Course;
+export default EnrollCourse;

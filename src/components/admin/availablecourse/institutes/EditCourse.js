@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../../web components/buttons/Button";
 import "./EditCourse.css";
 import Input from "../../../web components/input/Input";
@@ -41,57 +42,53 @@ const EditCourse = () => {
         </div>
         <div className="form-input-container">
           <form onSubmit={submitting}>
-            <Input
-              inputType={"text"}
-              inputName={"courseName"}
-              inputId={"courseName"}
-              inputPlaceholder={"Enter Course Name"}
+            <input
+              type="text"
+              name="courseName"
+              id="courseName"
+              placeholder="Enter Course Name"
               value={valuee.courseName}
               onChange={assignValues}
-            ></Input>
+            ></input>
             <br />
-            <Input
-              inputType={"text"}
-              inputName={"studentNumber"}
-              inputId={"studenttNumber"}
-              inputPlaceholder={"Enter Number of students"}
+            <input
+              type="text"
+              name="studentNumber"
+              id="studenttNumber"
+              placeholder="Enter Number of students"
               value={valuee.studenttNumber}
               onChange={assignValues}
-            ></Input>
+            ></input>
             <br />
-            <Input
-              inputType={"text"}
-              inputName={"courseduration"}
-              inputId={"courseduration"}
-              inputPlaceholder={"Enter Course Duration"}
+            <input
+              type="text"
+              name="courseduration"
+              id="courseduration"
+              placeholder="Enter Course Duration"
               value={valuee.courseduration}
               onChange={assignValues}
-            ></Input>
+            ></input>
             <br />
-            <Input
-              inputType={"text"}
-              inputName={"coursetiming"}
-              inputId={"coursetiming"}
-              inputPlaceholder={"Enter Course Timings"}
+            <input
+              type="text"
+              name="coursetiming"
+              id="coursetiming"
+              placeholder="Enter Course Timings"
               value={valuee.coursetiming}
               onChange={assignValues}
-            ></Input>
+            ></input>
             <br />
-            <Input
-              inputType={"text"}
-              inputName={"courseDescription"}
-              inputId={"courseDescription"}
-              inputPlaceholder={"Enter Course Description"}
+            <input
+              type="text"
+              name="courseDescription"
+              id="courseDescription"
+              placeholder="Enter Course Description"
               value={valuee.courseDescription}
               onChange={assignValues}
-            ></Input>
+            ></input>
             <br />
             <div className="form-btn">
-              <Button
-                className="button-institute"
-                BtnName={"Update"}
-                value="Edit Course"
-              />
+            <button className='button' onClick={()=>{alert()}}><span>{'Update'} </span></button>
             </div>
           </form>
         </div>

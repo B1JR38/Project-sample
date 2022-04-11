@@ -19,24 +19,14 @@ import EditInstitute from "./components/admin/ViewAcademy/institutes/EditInstitu
 import Availablecourse from "../src/components/user/availablecourse/availablecourse";
 import Availablecourses from "./components/admin/availablecourse/availablecourse";
 import AddCourse from './components/admin/availablecourse/institutes/AddCourse';
-import EditCourse from './components/admin/availablecourse/institutes/EditCourse
+import EditCourse from './components/admin/availablecourse/institutes/EditCourse';
+import EnrollCourse from './components/user/Enrollcourse/course';
+
 import { Switch } from '@mui/material';
-import Enrolledcourse from './components/user/enrolledcourse/enrolledCourse'; 
-//import useToken from './components/web components/token/useToken';
-//import Course from './components/admin/ViewAcademy/Enrolledcourse/Course'
-import Institute from './components/admin/ViewAcademy/institutes/Institute';
 
 function App() {
   const success = () => toast.success('Login Successful!!')
   const fail = (err) => toast.error(err)
-
-/*
-  const { token, setToken } = useToken();
-
-  if(!token) {
-    return <Login setToken={setToken} />
-  }
-*/
   return (
      <>
      <Router>
@@ -52,16 +42,15 @@ function App() {
              <Route path='/user/institutepage' element={<InstitutePagee/>}  />
              <Route path='/user/enrolledcourse' element={<Enrolledcourse/>}  />
              <Route path='/user/availablecourse' element={<Availablecourse/>}  />
-             <Route path="/institutes" element={<Institute />} />
+             <Route path='/user/enrollcourse' element={<EnrollCourse/>}/>
+             {/* <Route path="/institutes" element={<Institute />} /> */}
             <Route path="/enrollCourse" element={<Course />} />
-            <Route path="/addInstitute" element={<AddInstitute />} />
-            <Route path="/editInstitute" element={<EditInstitute />} />
+            <Route path="/addinstitute" element={<AddInstitute />} />
+            <Route path="/editinstitute" element={<EditInstitute />} />
             <Route path="/institutepage" element={<InstitutePage/>} />
             <Route path="/availablecourse" element={<Availablecourses/>} />
             <Route path="/addcourse" element={<AddCourse/>}/>
             <Route path="/editcourse" element={<EditCourse/>}/>
-             <Route path='/admin/institute' element={<Institute />}  />
-
            </Routes>
            {/* </Switch> */}
          </div>

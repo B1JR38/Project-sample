@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../../web components/buttons/Button.jsx";
 import Input from "../../../web components/input/Input.jsx";
+import CourseService from '../../services/CourseService';
 import "./AddCourse.css";
 
 const AddCourse = () => {
+  const history=useNavigate();
   const [valuee, setValue] = useState({
     courseName: "",
     studentNumber: "",
@@ -30,6 +33,9 @@ const AddCourse = () => {
     };
     AddInstitute.push(state);
     console.log(state);
+    CourseService.addCourse(state).then(res=>{
+      history('/availablecourse');
+    })
     localStorage.setItem("addinstitutedata", JSON.stringify(AddInstitute));
     e.preventDefault();
   };
@@ -41,57 +47,53 @@ const AddCourse = () => {
         </div>
         <div className="form-input-container">
           <form onSubmit={submitting}>
-            <Input
-              inputType={"text"}
-              inputName={"courseName"}
-              inputId={"courseName"}
-              inputPlaceholder={"Enter Your Course Name"}
+            <input
+              type="text"
+              name="courseName"
+              id="courseName"
+              placeholder="Enter Your Course Name"
               value={valuee.courseName}
               onChange={assignValues}
-            ></Input>
+            ></input>
             <br />
-            <Input
-              inputType={"text"}
-              inputName={"studentNumber"}
-              inputId={"studenttNumber"}
-              inputPlaceholder={"Enter Number of students"}
+            <input
+              type="text"
+              name="studentNumber"
+              id="studenttNumber"
+              placeholder="Enter Number of students"
               value={valuee.studenttNumber}
               onChange={assignValues}
-            ></Input>
+            ></input>
             <br />
-            <Input
-              inputType={"text"}
-              inputName={"courseduration"}
-              inputId={"courseduration"}
-              inputPlaceholder={"Enter Course Duration"}
+            <input
+              type="text"
+              name="courseduration"
+              id="courseduration"
+              placeholder="Enter Course Duration"
               value={valuee.courseduration}
               onChange={assignValues}
-            ></Input>
+            ></input>
             <br />
-            <Input
-              inputType={"text"}
-              inputName={"coursetiming"}
-              inputId={"coursetiming"}
-              inputPlaceholder={"Enter Course Timings"}
+            <input
+              type="text"
+              name="coursetiming"
+              id="coursetiming"
+              placeholder="Enter Course Timings"
               value={valuee.coursetiming}
               onChange={assignValues}
-            ></Input>
+            ></input>
             <br />
-            <Input
-              inputType={"text"}
-              inputName={"courseDescription"}
-              inputId={"courseDescription"}
-              inputPlaceholder={"Enter Course Description"}
+            <input
+              type="text"
+              name="courseDescription"
+              id="courseDescription"
+              placeholder="Enter Course Description"
               value={valuee.courseDescription}
               onChange={assignValues}
-            ></Input>
+            ></input>
             <br />
             <div className="form-btn">
-              <Button
-                className="button-institute"
-                BtnName={"Add"}
-                value="Add Course"
-              />
+            <button className='button' onClick={()=>{alert()}}><span>{'Add'} </span></button>
             </div>
           </form>
         </div>

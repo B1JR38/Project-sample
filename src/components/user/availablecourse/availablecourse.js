@@ -1,6 +1,7 @@
 import React from 'react'
 import './availablecourse.css';
 import Button from "../../web components/buttons/Button";
+import { Link } from 'react-router-dom';
 
 const Availablecourse = () => {
   
@@ -20,7 +21,7 @@ const Availablecourse = () => {
             Number of Students: 444 <br></br>
             </h2>
             <div className='button-alignment'>
-            <button className='enrollbutton' id='enrollbutton'>Enrol Me</button>
+            <button className='enrollbutton' id='enrollbutton'><Link to={'/user/enrollcourse'}>Enroll Me</Link></button>
             </div>
         </div>
         <div className='enrolledcoursecontent'>
@@ -30,7 +31,7 @@ const Availablecourse = () => {
             Number of Students: 444 <br></br>
             </h2>
             <div className='button-alignment'>
-            <button className='enrollbutton' id='enrollbutton'>Enrol Me</button>
+            <button className='enrollbutton' id='enrollbutton'><Link to={'/user/enrollcourse'}>Enroll Me</Link></button>
             </div>
         </div>
         </section>
