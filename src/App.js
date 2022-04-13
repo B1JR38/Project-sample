@@ -22,6 +22,7 @@ import AddCourse from './components/admin/availablecourse/institutes/AddCourse';
 import EditCourse from './components/admin/availablecourse/institutes/EditCourse';
 import EnrollCourse from './components/user/Enrollcourse/course';
 import UserLogin from './components/user/userlogin/login';
+import Student from './components/admin/Students/Student';
 
 import { Switch } from '@mui/material';
 
@@ -34,7 +35,6 @@ function App() {
        <div>
        <Navbar />
          <div className="App">
-           {/* <Switch> */}
            <Routes>
              <Route path='/' element={<Home/>} />
              <Route path='/admin/signup' element={<AdminSignup/>} success={success} fail={fail} />
@@ -53,8 +53,8 @@ function App() {
             <Route path="/availablecourse" element={<Availablecourses/>} />
             <Route path="/addcourse" element={<AddCourse/>}/>
             <Route path="/editcourse/:courseId" element={<EditCourse/>}/>
+            <Route path="/student" element={<Student/>}/>
            </Routes>
-           {/* </Switch> */}
          </div>
        </div>
      </Router>

@@ -25,9 +25,9 @@ const InstitutePage=()=>{
     const addinstitute=()=>{
         history('/addinstitute');
     }
-    // const searchfilter=(event)=>{
-    //     setfilter(event.target.value);
-    // }
+    const searchfilter=(event)=>{
+        setfilter(event.target.value);
+    }
     useEffect(()=>{
         InstituteService.getInstitute().then((res)=>{
         setinstitutes(res.data);
@@ -37,9 +37,9 @@ const InstitutePage=()=>{
     },[]);
     //const displaysearch=filter.length>0;
 
-    // const dataSearch=data.instituteData.filter((val)=>{
-    //     return(val.name.includes(filter))
-    // })
+    const dataSearch=institutes.filter((val)=>{
+        return(val.academyName.includes(filter))
+    })
 
     // console.log(dataSearch);
     
@@ -48,16 +48,16 @@ const InstitutePage=()=>{
         <div className='Navbar2'>
             <Link to='/institutepage' className='instnav'>Institutes</Link>
             <Link to='/availablecourse' className='instnav'>Courses</Link>
-            <Link to='/' className='instnav'>Students</Link>
+            <Link to='/student' className='instnav'>Students</Link>
         </div>
         <div className='instpage'>
         <div className='search'>
                 {/* <input className='searchtext' type="text" placeholder='Search Here' value={filter} onChange={searchfilter}></input> */}
-                <input className='searchtext' type="text" placeholder='Search Here'></input>
+                <input className='searchtext' type="text" placeholder='Search Here' value={filter} onChange={searchfilter}></input>
                 <Button className='button' BtnName='Search' value='Search' />
             </div>
         <section className='container'>
-            {institutes.map((item)=>{
+            {dataSearch.map((item)=>{
                 return(
                     <div>
                     <div className='card' key={item}>

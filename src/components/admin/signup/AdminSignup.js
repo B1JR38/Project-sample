@@ -63,7 +63,7 @@ const Signup = () => {
         navigate('/admin/signup',{ replace:true });
     }
     else if(valuee.select==='User'){
-        navigate('/',{ replace:true });
+        navigate('/user/signup',{ replace:true });
     }
   }
     

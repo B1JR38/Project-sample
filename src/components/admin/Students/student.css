@@ -1,0 +1,40 @@
+.table-container{
+    padding: 0 10%;
+    margin: 40px auto 0;
+}
+.heading{
+    font-size: 40px;
+    text-align: center;
+    color: #3cf;
+    font-family: sans-serif;
+    margin-bottom: 40px;
+}
+.table{
+    width:100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+.table thead{
+    /* background-color: rgb(12, 88, 202); */
+    background-image: linear-gradient(to bottom right, #292b53, rgb(10, 193, 253));
+}
+.table thead tr th{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.35px;
+    color:white;
+    opacity: 1;
+    padding: 12px;
+    vertical-align: top;
+    border: 1px solic black;
+}
+.table tbody tr td{
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    font-weight: normal;
+    color: black;
+    background-color: azure;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid black;
+}

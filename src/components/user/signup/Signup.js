@@ -93,7 +93,7 @@ const Signup = () => {
             </form>
             {/* <Button BtnName={"Submit"} state={state} /> */}
             <footer className='footer'>
-                <p>Already a user? <Link to='/login' className='link'>Login</Link></p>
+                <p>Already a user? <Link to='/user/login' className='link'>Login</Link></p>
             </footer>
             </div>  
         </div>

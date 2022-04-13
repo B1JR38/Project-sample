@@ -7,10 +7,17 @@ import AddCourse from './institutes/AddCourse';
 import CourseService from '../services/CourseService';
 const Availablecourses = () => {
     const [course,setcourse]=useState([]);
+    const[filter,setfilter]=useState("");
+    const searchfilter=(event)=>{
+        setfilter(event.target.value);
+    }
     useEffect(()=>{
         CourseService.getCourse().then((res)=> setcourse(res.data));
     },[]);
     const history=useNavigate();
+    const dataSearch=course.filter((val)=>{
+        return(val.courseName.includes(filter))
+    })
     function editcourse(id){
         console.log(id);
         history('/editcourse/'+id);
@@ -25,12 +32,12 @@ const Availablecourses = () => {
         <div>
             <div className='instpage'>
             <div className='search'>
-                <input className='searchtext' type="text" placeholder='Search Here' ></input>
+                <input className='searchtext' type="text" placeholder='Search Here' value={filter} onChange={searchfilter}></input>
                 <Button className='button' BtnName='Search' value='Search' />
             </div>
         {/* <div className='card'> */}
         <section className='container'>
-            {course.map((item)=>{
+            {dataSearch.map((item)=>{
                 return(
                     <div className='enrolledcoursecontent' key={item}>
                         <h2>Course Name :{item.courseName} <br></br>
