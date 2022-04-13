@@ -1,0 +1,36 @@
+.search-field {
+  display: block;
+  margin-left: 30%;
+  margin-right: 30%;
+  align-items: center;
+  align-content: center;
+}
+.s-field {
+  height: 36px;
+  width: 80%;
+  padding-right: 10%;
+}
+.form-institute {
+  display: flex;
+  margin-top: 10%;
+  margin-left: 40%;
+}
+
+#f-addinst {
+  align-items: center;
+  margin-top: 5%;
+  margin-left: 5%;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin-right: 5%;
+  width: 6%;
+  background-color: whitesmoke;
+}
+#f-editinst {
+  align-items: center;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 6%;
+  border: 3px solid black;
+  border-radius: 10px;
+}

@@ -1,0 +1,30 @@
+.enrolledcoursecontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    white-space: pre-wrap;
+    padding: 2rem;
+    width: 500px;
+    height:200px;
+    background-color: #25274d;
+    border-radius: 10px;
+    font-family: serif;
+    color: whitesmoke;
+    opacity: 0.85;
+}
+
+.enrollbutton {
+  background-color: rgb(99, 10, 10);
+  color:white;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius:5px;
+  cursor: pointer;
+
+}
+
+.button-alignment{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}

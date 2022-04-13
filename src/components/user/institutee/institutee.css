@@ -1,0 +1,98 @@
+.Navbar{
+    position:sticky;
+    padding-top: 0px;
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    background: white;
+    /* width:270px; */
+    margin:10px;
+    padding:10px;
+    border-radius: 10px;
+}
+.img{
+    height:150px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+.instimg{
+    background-image:url('./institute1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:270px;
+}
+.card p{
+    padding:3px;
+    margin:0px;
+    margin-bottom: 5px;
+}
+.rating{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0%;
+    margin: 0%;
+}
+a{
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin-bottom:10px;
+}
+a:hover{
+    font-size: 1.2rem;
+}
+.instpage{
+    display: flex;
+    flex-direction: column;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    padding-left: 5%;
+}
+.searchtext{
+    margin:10px;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 43px;
+    resize: none;
+    outline: none;
+    border: none;
+}
+.button{
+    margin-left: 10px;
+    height:43px;
+}
+.Navbar2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: space-around; */
+}
+.instnav{
+    background-color: #25274d;
+    padding:5px;
+    margin: 5px;
+    border-radius: 5px;
+    color:white;
+    font-size:large;
+    border:3px solid #3cf;
+}
+.instnav:hover{
+    background-color: #2e2f52;
+    font-size: larger;
+    transition: .25s;
+    color:#3cf;
+    padding:7px;
+    
+}
