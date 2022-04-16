@@ -28,13 +28,9 @@ public class AdmissionService {
     @Autowired
     private InstituteRepository instituteRepository;
 
-    public void addAdmission(StudentModel studentModel, Integer courseId, Integer instituteId){
-
-        admissionModel.getStudentModel();
-        admissionModel.getCourseModel().getCourseId();
-        admissionModel.getInstituteModel().getInstituteId();
-        admissionRepository.save(admissionModel);
-    }
+//    public void addAdmission(StudentModel studentModel, Integer courseId, Integer instituteId){
+//
+//    }
 
     public AdmissionModel viewAdmission(Integer admissionId){
         return admissionRepository.findById(admissionId).get();

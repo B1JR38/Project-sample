@@ -9,17 +9,44 @@ public class StudentModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int studentId;
-    private String studentName;
-    private Date studentDOB;
-    private String address;
-    private String mobile;
-    private int SSLC;
-    private int HSC;
-    private int Diploma;
-    private String eligibility;
+    private String firstName;
+    private String lastName;
+    private String gender;
+    private String fatherName;
+    private String phoneNumber;
+    private String alternateNumber;
+    private String motherName;
+    private String emailId;
+    private int age;
+    private int marks;
+    private String houseNo;
+    private String streetName;
+    private String areaName;
+    private String pincode;
+    private String state;
+    private String nationality;
 
 
     public StudentModel() {
+    }
+
+    public StudentModel(String firstName, String lastName, String gender, String fatherName, String phoneNumber, String alternateNumber, String motherName, String emailId, int age, int marks, String houseNo, String streetName, String areaName, String pincode, String state, String nationality) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.fatherName = fatherName;
+        this.phoneNumber = phoneNumber;
+        this.alternateNumber = alternateNumber;
+        this.motherName = motherName;
+        this.emailId = emailId;
+        this.age = age;
+        this.marks = marks;
+        this.houseNo = houseNo;
+        this.streetName = streetName;
+        this.areaName = areaName;
+        this.pincode = pincode;
+        this.state = state;
+        this.nationality = nationality;
     }
 
     public int getStudentId() {
@@ -30,68 +57,131 @@ public class StudentModel {
         this.studentId = studentId;
     }
 
-    public String getStudentName() {
-        return studentName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public Date getStudentDOB() {
-        return studentDOB;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setStudentDOB(Date studentDOB) {
-        this.studentDOB = studentDOB;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public String getAddress() {
-        return address;
+    public String getGender() {
+        return gender;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    public String getMobile() {
-        return mobile;
+    public String getFatherName() {
+        return fatherName;
     }
 
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
+    public void setFatherName(String fatherName) {
+        this.fatherName = fatherName;
     }
 
-    public int getSSLC() {
-        return SSLC;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setSSLC(int SSLC) {
-        this.SSLC = SSLC;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
-    public int getHSC() {
-        return HSC;
+    public String getAlternateNumber() {
+        return alternateNumber;
     }
 
-    public void setHSC(int HSC) {
-        this.HSC = HSC;
+    public void setAlternateNumber(String alternateNumber) {
+        this.alternateNumber = alternateNumber;
     }
 
-    public int getDiploma() {
-        return Diploma;
+    public String getMotherName() {
+        return motherName;
     }
 
-    public void setDiploma(int diploma) {
-        Diploma = diploma;
+    public void setMotherName(String motherName) {
+        this.motherName = motherName;
     }
 
-    public String getEligibility() {
-        return eligibility;
+    public String getEmailId() {
+        return emailId;
     }
 
-    public void setEligibility(String eligibility) {
-        this.eligibility = eligibility;
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getMarks() {
+        return marks;
+    }
+
+    public void setMarks(int marks) {
+        this.marks = marks;
+    }
+
+    public String getHouseNo() {
+        return houseNo;
+    }
+
+    public void setHouseNo(String houseNo) {
+        this.houseNo = houseNo;
+    }
+
+    public String getStreetName() {
+        return streetName;
+    }
+
+    public void setStreetName(String streetName) {
+        this.streetName = streetName;
+    }
+
+    public String getAreaName() {
+        return areaName;
+    }
+
+    public void setAreaName(String areaName) {
+        this.areaName = areaName;
+    }
+
+    public String getPincode() {
+        return pincode;
+    }
+
+    public void setPincode(String pincode) {
+        this.pincode = pincode;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getNationality() {
+        return nationality;
+    }
+
+    public void setNationality(String nationality) {
+        this.nationality = nationality;
+    }
 }

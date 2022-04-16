@@ -9,35 +9,51 @@ import javax.persistence.Id;
 public class AdmissionModel {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int admissionId;
 
-    @ManyToOne
-    @JoinColumn(name = "student_model_student_id")
-    private StudentModel studentModel;
+    @ManyToOne(cascade = CascadeType.MERGE)
+    private StudentModel studentId;
 
-    @ManyToOne
-    @JoinColumn(name = "course_model_course_id")
-    private CourseModel courseModel;
+    @ManyToOne(cascade = CascadeType.MERGE)
+    private CourseModel courseId;
 
-    @ManyToOne
-    @JoinColumn(name = "institute_model_institute_id")
-    private InstituteModel instituteModel;
+    @ManyToOne(cascade = CascadeType.MERGE)
+    private InstituteModel instituteId;
+
 
     public AdmissionModel() {
     }
 
-    public InstituteModel getInstituteModel() {
-        return instituteModel;
+    public AdmissionModel(StudentModel studentId, CourseModel courseId, InstituteModel instituteId) {
+        this.studentId = studentId;
+        this.courseId = courseId;
+        this.instituteId = instituteId;
     }
 
-    public CourseModel getCourseModel() {
-        return courseModel;
+    public StudentModel getStudentId() {
+        return studentId;
     }
 
-    public StudentModel getStudentModel() {
-        return studentModel;
+    public void setStudentId(StudentModel studentId) {
+        this.studentId = studentId;
     }
 
+    public CourseModel getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(CourseModel courseId) {
+        this.courseId = courseId;
+    }
+
+    public InstituteModel getInstituteId() {
+        return instituteId;
+    }
+
+    public void setInstituteId(InstituteModel instituteId) {
+        this.instituteId = instituteId;
+    }
 
     public int getAdmissionId() {
         return admissionId;
