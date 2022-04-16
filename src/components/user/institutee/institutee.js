@@ -37,7 +37,6 @@ const InstitutePagee=()=>{
         </div>
         <div className='instpage'>
         <div className='search'>
-                {/* <input className='searchtext' type="text" placeholder='Search Here' value={filter} onChange={searchfilter}></input> */}
                 <input className='searchtext' type="text" placeholder='Search Here' value={filter} onChange={searchfilter}></input>
                 <Button className='button' BtnName='Search' value='Search' />
             </div>

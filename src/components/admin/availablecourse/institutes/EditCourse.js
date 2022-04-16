@@ -17,9 +17,13 @@ const EditCourse = (props) => {
   });
   // console.log(valuee.courseId);
   // const id=props.match.params.id;
-  useEffect(()=>{
-    const id=valuee.courseId;
-    console.log(id);});
+  useEffect((courseId)=>{
+    console.log(props);
+    // const id=valuee.courseId;
+    // console.log(id);
+    // setValue(localStorage.getItem('courseName'));
+  },[]);
+    
     // const {courseId}=useParams();
     // console.log(courseId);
       //axios.get('http://localhost:8080/admin/viewCourses'+valuee.courseId).then(res=>{
@@ -57,7 +61,7 @@ const EditCourse = (props) => {
     AddInstitute.push(state);
     console.log(state);
     console.log(valuee.courseId);
-    CourseService.editCourse(state,valuee.courseId).then(res=>{
+    CourseService.editCourse(state,state.courseId).then(res=>{
       history('/availablecourse');
     });
     localStorage.setItem("addinstitutedata", JSON.stringify(AddInstitute));

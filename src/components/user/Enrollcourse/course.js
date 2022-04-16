@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import StudentService from "../../admin/services/StudentService";
 // import { FaAngellist, FaGenderless, FaHandScissors } from 'react-icons/fa'
 // import {Link} from 'react-router-dom'
 import Button from "../../web components/buttons/Button";
@@ -6,10 +8,11 @@ import Input from "../../web components/input/Input.jsx";
 import "./course.css";
 
 const EnrollCourse = () => {
+  const history=useNavigate();
   const [valuee, setValue] = useState({
     firstName: "",
     lastName: "",
-    Gender: "",
+    gender: "",
     fatherName: "",
     phoneNumber: "",
     alternateNumber: "",
@@ -37,7 +40,7 @@ const EnrollCourse = () => {
     let state = {
       firstName: valuee.firstName,
       lastName: valuee.lastName,
-      Gender: valuee.Gender,
+      gender: valuee.gender,
       fatherName: valuee.fatherName,
       phoneNumber: valuee.phoneNumber,
       alternateNumber: valuee.alternateNumber,
@@ -54,6 +57,9 @@ const EnrollCourse = () => {
     };
     courses.push(state);
     console.log(state);
+    StudentService.addStudent(state).then(res=>{
+      history('/user/enrolledcourse');
+    })
     localStorage.setItem("coursedata", JSON.stringify(courses));
     e.preventDefault();
   };
@@ -87,10 +93,10 @@ const EnrollCourse = () => {
                 <br />
                 <input
                   type="text"
-                  name="Gender"
-                  id="Gender"
+                  name="gender"
+                  id="gender"
                   placeholder="Enter Your Gender"
-                  value={valuee.Gender}
+                  value={valuee.gender}
                   onChange={assignValues}
                 ></input>
                 <br />

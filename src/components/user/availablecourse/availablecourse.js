@@ -5,15 +5,18 @@ import './availablecourse.css';
 import Button from "../../web components/buttons/Button";
 import CourseService from '../../admin/services/CourseService';
 const Availablecourse = () => {
+    const history=useNavigate();
     const [course,setcourse]=useState([]);
     const[filter,setfilter]=useState("");
+    const enrolcourse=()=>{
+        history("/user/enrollcourse");
+    }
     const searchfilter=(event)=>{
         setfilter(event.target.value);
     }
     useEffect(()=>{
         CourseService.getCourse().then((res)=> setcourse(res.data));
     },[]);
-    const history=useNavigate();
     const dataSearch=course.filter((val)=>{
         return(val.courseName.includes(filter))
     })
@@ -34,6 +37,9 @@ const Availablecourse = () => {
                         Available Timings:{item.coursetiming} <br></br>
                         Number of Students: {item.studentNumber} <br></br>
                         </h2>
+                        <div className='button-alignment'>
+                            <button className='enrollbutton' id='enrollbutton' onClick={enrolcourse}>Enrol Me</button>
+                        </div>
                     </div>
                 )
             })}

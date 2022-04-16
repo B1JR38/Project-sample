@@ -5,6 +5,7 @@ import './availablecourse.css';
 import Button from "../../web components/buttons/Button";
 import AddCourse from './institutes/AddCourse';
 import CourseService from '../services/CourseService';
+import EditCourse from './institutes/EditCourse';
 const Availablecourses = () => {
     const [course,setcourse]=useState([]);
     const[filter,setfilter]=useState("");
@@ -18,9 +19,11 @@ const Availablecourses = () => {
     const dataSearch=course.filter((val)=>{
         return(val.courseName.includes(filter))
     })
-    function editcourse(id){
+    const editcourse=(id)=>{
         console.log(id);
         history('/editcourse/'+id);
+        localStorage.setItem('ID',id)
+        EditCourse({course});
     }
     const deletecourse=(id)=>{
         CourseService.deleteCourse(id).then(res=>{
@@ -53,19 +56,6 @@ const Availablecourses = () => {
                     </div>
                 )
             })}
-        
-        {/* <div className='enrolledcoursecontent'>
-        <h2>Course Name :B.E(ECE) <br></br>
-            Course Duration:4 years<br></br>
-            Available Timings: 9am to 4pm<br></br>
-            Number of Students: 444 <br></br>
-            </h2>
-            <div className='button-alignment'>
-            <Link to='/editcourse' className='edit'><FaEdit/></Link>
-            <Link to='#' className='edit'><FaTrash/></Link>
-        
-            </div>
-        </div> */}
         </section>
         <div className='button2'>
             <Link to="/addcourse">
