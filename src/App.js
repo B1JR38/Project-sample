@@ -39,12 +39,12 @@ function App() {
              <Route path='/' element={<Home/>} />
              <Route path='/admin/signup' element={<AdminSignup/>} success={success} fail={fail} />
              <Route path='/user/signup' element={<Signup/>} success={success} fail={fail} />
-             <Route path='/login' element={<Login/>} success={success} fail={fail} />
+             <Route path='/admin/login' element={<Login/>} success={success} fail={fail} />
              <Route path='/user/institutepage' element={<InstitutePagee/>}  />
              <Route path='/user/enrolledcourse' element={<Enrolledcourse/>}  />
              <Route path='/user/availablecourse' element={<Availablecourse/>}  />
              <Route path='/user/enrollcourse' element={<EnrollCourse/>}/>
-             <Route path='user/login' element={<UserLogin/>} success={success} fail={fail} />
+             <Route path='/user/login' element={<UserLogin/>} success={success} fail={fail} />
              {/* <Route path="/institutes" element={<Institute />} /> */}
             <Route path="/enrollCourse" element={<Course />} />
             <Route path="/addinstitute" element={<AddInstitute />} />

@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from "react";
+import {useNavigate} from 'react-router-dom';
 import { FaEdit , FaTrash } from 'react-icons/fa';
 import StudentService from "../services/StudentService";
 import '../Students/student.css';
 const Student=()=>{
+    const history=useNavigate();
     const[student,setstudent]=useState([]);
     const deletestudent=(id)=>{
         StudentService.deleteStudent(id).then(res=>{
             setstudent(student.filter(response=>response.studentId!==id));
         });
         alert('student Deleted');
+    }
+    const addstudent=()=>{
+        history('/enrollcourse');
     }
     useEffect(()=>{
             StudentService.getStudent().then((res)=>{
@@ -43,6 +48,12 @@ const Student=()=>{
                     
                 </tbody>
             </table>
+            <div className='button2'>
+            {/* <Link to="/addinstitute">
+            <Button className="link" BtnName={"Add"} id="f-addinst" />
+            </Link> */}
+            <button className='button' onClick={addstudent}><span>{'Add'} </span></button>
+        </div>
         </div>
     );
 }

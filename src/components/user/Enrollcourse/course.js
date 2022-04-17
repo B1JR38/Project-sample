@@ -26,6 +26,8 @@ const EnrollCourse = () => {
     pincode: "",
     state: "",
     nationality: "",
+    instituteid:"",
+    courseid:"",
   });
   const assignValues = (e) => {
     const name = e.target.name;
@@ -54,6 +56,8 @@ const EnrollCourse = () => {
       pincode: valuee.pincode,
       state: valuee.state,
       nationality: valuee.nationality,
+      instituteid:valuee.instituteid,
+      courseid:valuee.courseid,
     };
     courses.push(state);
     console.log(state);
@@ -150,8 +154,26 @@ const EnrollCourse = () => {
                   onChange={assignValues}
                 ></input>
                 <br />
+                <input
+                  type="text"
+                  name="instituteid"
+                  id="instituteid"
+                  placeholder="Enter instituteid"
+                  value={valuee.instituteid}
+                  onChange={assignValues}
+                ></input>
+                <br/>
               </div>
               <div className="form2">
+              <input
+                  type="text"
+                  name="courseid"
+                  id="courseid"
+                  placeholder="Enter courseid"
+                  value={valuee.courseid}
+                  onChange={assignValues}
+                ></input>
+                <br />
                 <input
                   type="text"
                   name="age"
@@ -230,6 +252,7 @@ const EnrollCourse = () => {
                   onChange={assignValues}
                 ></input>
                 <br />
+                
               </div>
               <div className="form-btn1">
               <button className='button' onClick={()=>{alert()}}><span>{'Enroll'} </span></button>

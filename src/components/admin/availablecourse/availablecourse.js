@@ -33,6 +33,11 @@ const Availablecourses = () => {
     }
     return (
         <div>
+            <div className='Navbar2'>
+            <Link to='/institutepage' className='instnav'>Institutes</Link>
+            <Link to='/availablecourse' className='instnav'>Courses</Link>
+            <Link to='/student' className='instnav'>Students</Link>
+        </div>
             <div className='instpage'>
             <div className='search'>
                 <input className='searchtext' type="text" placeholder='Search Here' value={filter} onChange={searchfilter}></input>
