@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-@CrossOrigin(origins ="http://localhost:8081")
+@CrossOrigin(origins ="*")
 @RestController
 @RequestMapping("/admin")
 public class AdminController {
@@ -39,6 +39,11 @@ public class AdminController {
     @GetMapping("/viewCourses")
     public List<CourseModel> viewCourses(){
         return courseService.viewCourses();
+    }
+
+    @GetMapping("/viewCourse/{courseId}")
+    public CourseModel viewCourse(@PathVariable Integer courseId){
+        return courseService.viewCourse(courseId);
     }
 
     @PutMapping("/editCourse/{courseId}")
@@ -67,6 +72,11 @@ public class AdminController {
     @GetMapping("/viewInstitutes")
     public List<InstituteModel> viewInstitutes(){
         return instituteService.viewInstitutes();
+    }
+
+    @GetMapping("/viewInstitute/{instituteId}")
+    public InstituteModel viewInstitute(@PathVariable Integer instituteId){
+        return instituteService.viewInstitute(instituteId);
     }
 
     @PutMapping("/editInstitute/{instituteId}")

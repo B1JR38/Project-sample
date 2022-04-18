@@ -25,12 +25,15 @@ public class StudentModel {
     private String pincode;
     private String state;
     private String nationality;
+    private int courseid;
+    private String coursename;
 
 
     public StudentModel() {
     }
 
-    public StudentModel(String firstName, String lastName, String gender, String fatherName, String phoneNumber, String alternateNumber, String motherName, String emailId, int age, int marks, String houseNo, String streetName, String areaName, String pincode, String state, String nationality) {
+
+    public StudentModel(String firstName, String lastName, String gender, String fatherName, String phoneNumber, String alternateNumber, String motherName, String emailId, int age, int marks, String houseNo, String streetName, String areaName, String pincode, String state, String nationality, String coursename, int courseid) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
@@ -47,6 +50,24 @@ public class StudentModel {
         this.pincode = pincode;
         this.state = state;
         this.nationality = nationality;
+        this.courseid = courseid;
+        this.coursename = coursename;
+    }
+
+    public String getCoursename() {
+        return coursename;
+    }
+
+    public void setCoursename(String coursename) {
+        this.coursename = coursename;
+    }
+
+    public int getCourseid() {
+        return courseid;
+    }
+
+    public void setCourseid(int courseid) {
+        this.courseid = courseid;
     }
 
     public int getStudentId() {

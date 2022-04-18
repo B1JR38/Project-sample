@@ -19,7 +19,7 @@ public class CourseService {
     }
 
     public CourseModel viewCourse(Integer courseId){
-        return courseRepository.getById(courseId);
+        return courseRepository.findById(courseId).get();
     }
 
     public void addCourse(CourseModel courseModel){

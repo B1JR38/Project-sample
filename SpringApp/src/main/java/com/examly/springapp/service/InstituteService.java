@@ -26,7 +26,7 @@ public class InstituteService {
     }
 
     public InstituteModel viewInstitute(Integer instituteId){
-        return instituteRepository.getById(instituteId);
+        return instituteRepository.findById(instituteId).get();
     }
 
 }
