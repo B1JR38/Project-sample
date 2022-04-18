@@ -53,7 +53,7 @@ const Signup = () => {
     AuthService.addadmin(state).then(res=>{
         history('/login');
     })
-    localStorage.setItem('usersdata',JSON.stringify(users));
+    // localStorage.setItem('usersdata',JSON.stringify(users));
     event.preventDefault();
   }
 

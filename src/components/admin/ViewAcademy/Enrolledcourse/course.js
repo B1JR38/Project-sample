@@ -60,7 +60,7 @@ const Course = () => {
     StudentService.addStudent(state).then(res=>{
         history('/student');
     })
-    localStorage.setItem("coursedata", JSON.stringify(courses));
+    // localStorage.setItem("coursedata", JSON.stringify(courses));
     e.preventDefault();
   };
   return (
@@ -232,7 +232,7 @@ const Course = () => {
                 <br />
               </div>
               <div className="form-btn1">
-              <button className='button' onClick={()=>{alert()}}><span>{'Enroll'} </span></button>
+              <button className='button' onClick={()=>{alert('Student Added')}}><span>{'Enroll'} </span></button>
               </div>
             </form>
           </div>

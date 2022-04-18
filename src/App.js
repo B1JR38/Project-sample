@@ -23,6 +23,7 @@ import EditCourse from './components/admin/availablecourse/institutes/EditCourse
 import EnrollCourse from './components/user/Enrollcourse/course';
 import UserLogin from './components/user/userlogin/login';
 import Student from './components/admin/Students/Student';
+import Editstudent from './components/admin/ViewAcademy/Enrolledcourse/editstudent';
 
 import { Switch } from '@mui/material';
 
@@ -42,18 +43,19 @@ function App() {
              <Route path='/admin/login' element={<Login/>} success={success} fail={fail} />
              <Route path='/user/institutepage' element={<InstitutePagee/>}  />
              <Route path='/user/enrolledcourse' element={<Enrolledcourse/>}  />
-             <Route path='/user/availablecourse' element={<Availablecourse/>}  />
-             <Route path='/user/enrollcourse' element={<EnrollCourse/>}/>
+             <Route path='/user/availablecourse/:id' element={<Availablecourse/>}  />
+             <Route path='/user/enrollcourse/:id' element={<EnrollCourse/>}/>
              <Route path='/user/login' element={<UserLogin/>} success={success} fail={fail} />
              {/* <Route path="/institutes" element={<Institute />} /> */}
             <Route path="/enrollCourse" element={<Course />} />
             <Route path="/addinstitute" element={<AddInstitute />} />
-            <Route path="/editinstitute/:courseId" element={<EditInstitute />} />
+            <Route path="/editinstitute/:instituteId" element={<EditInstitute />} />
             <Route path="/institutepage" element={<InstitutePage/>} />
             <Route path="/availablecourse" element={<Availablecourses/>} />
             <Route path="/addcourse" element={<AddCourse/>}/>
             <Route path="/editcourse/:courseId" element={<EditCourse/>}/>
             <Route path="/student" element={<Student/>}/>
+            <Route path="/editstudent/:studentId" element={<Editstudent/>}/>
            </Routes>
          </div>
        </div>

@@ -6,6 +6,9 @@ import '../Students/student.css';
 const Student=()=>{
     const history=useNavigate();
     const[student,setstudent]=useState([]);
+    const editstudent=(id)=>{
+        history('/editstudent/'+id);
+    }
     const deletestudent=(id)=>{
         StudentService.deleteStudent(id).then(res=>{
             setstudent(student.filter(response=>response.studentId!==id));
@@ -41,7 +44,8 @@ const Student=()=>{
                                 <td>{item.firstName}</td>
                                 <td>{item.emailId}</td>
                                 <td>{item.phoneNumber}</td>
-                                <td style={{cursor:'pointer'}}><FaEdit /><FaTrash onClick={()=>deletestudent(item.studentId)}/></td>
+                                <td style={{cursor:'pointer'}}><FaEdit onClick={()=>editstudent(item.studentId)}/>
+                                <FaTrash onClick={()=>deletestudent(item.studentId)}/></td>
                             </tr>
                         )
                     })}

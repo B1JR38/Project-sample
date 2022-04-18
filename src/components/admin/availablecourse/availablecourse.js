@@ -19,10 +19,11 @@ const Availablecourses = () => {
     const dataSearch=course.filter((val)=>{
         return(val.courseName.includes(filter))
     })
-    const editcourse=(id)=>{
+    const editcourse=(id,item)=>{
         console.log(id);
         history('/editcourse/'+id);
-        localStorage.setItem('ID',id)
+        localStorage.setItem('coursedetails',JSON.stringify(item));
+        console.log(item);
         EditCourse({course});
     }
     const deletecourse=(id)=>{
@@ -55,7 +56,7 @@ const Availablecourses = () => {
                         </h2>
                         <div className='button-alignment'>
                             {/* <Link to={'/editcourse/'+item.courseId} className='edit' ><FaEdit/></Link> */}
-                        <FaEdit onClick={()=>editcourse(item.courseId)} style={{cursor:'pointer'}}/>
+                        <FaEdit onClick={()=>editcourse(item.courseId,item)} style={{cursor:'pointer'}}/>
                         <FaTrash onClick={()=> deletecourse(item.courseId)} style={{cursor:'pointer'}}/>
                         </div>
                     </div>

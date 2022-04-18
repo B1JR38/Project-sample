@@ -13,8 +13,8 @@ const InstitutePage=()=>{
     // const institutes={};
     const[filter,setfilter]=useState("");
     const history=useNavigate();
-    const editinstitute=()=>{
-            history('/editinstitute');
+    const editinstitute=(id)=>{
+            history('/editinstitute/'+id);
     }
     const deleteinstitute=(id)=>{
         InstituteService.deleterInstitute(id).then(res=>{
@@ -66,10 +66,10 @@ const InstitutePage=()=>{
                     <div className='rating'>
                         <p>Place:{item.academyLocation}</p>
                         {/* <Link to='admin/editinstitute' className='link'><FaEdit/></Link> */}
-                        <FaEdit onClick={editinstitute} style={{cursor:'pointer'}}/>
+                        <FaEdit onClick={()=>editinstitute(item.instituteId)} style={{cursor:'pointer'}}/>
                         <FaTrash onClick={()=>deleteinstitute(item.instituteId)} style={{cursor:'pointer'}}/>
                         {/* <Link to='#' className='link'><FaTrash/></Link> */}
-                        <Rating name="size-small" defaultValue={item.rating} size="small" />
+                        <Rating name="size-small" defaultValue={4} size="small" />
                     </div>
                     
                 </div>

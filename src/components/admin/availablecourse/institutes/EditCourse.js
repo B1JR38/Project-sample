@@ -6,39 +6,36 @@ import Input from "../../../web components/input/Input";
 import axios from "axios";
 import CourseService from "../../services/CourseService";
 
-const EditCourse = (props) => {
+const EditCourse = () => {
+  const courseId=useParams();
+  const history=useNavigate();
+  // console.log(courseId);
+  const id=courseId.courseId;
   const [valuee, setValue] = useState({
-    courseId:useParams(),
+    courseId:id,
     courseName: "",
     studentNumber: "",
     courseduration: "",
     coursetiming: "",
     courseDescription: "",
   });
-  // console.log(valuee.courseId);
-  // const id=props.match.params.id;
-  useEffect((courseId)=>{
-    console.log(props);
-    // const id=valuee.courseId;
+  useEffect(()=>{
     // console.log(id);
-    // setValue(localStorage.getItem('courseName'));
-  },[]);
-    
-    // const {courseId}=useParams();
-    // console.log(courseId);
-      //axios.get('http://localhost:8080/admin/viewCourses'+valuee.courseId).then(res=>{
-        //console.log(res.data);
-          // setValue({
-          //   id:res.data.courseId,
-          //   courseName:res.data.courseName,
-          //   studentNumber:res.data.studentNumber,
-          //   coursetiming:res.data.coursetiming,
-          //   courseDescription:res.data.courseDescription
-          // });
-  //     }).catch((error)=>{
-  //       console.log('Error - '+error);
-  //     });
-  // })
+      CourseService.getcoursebyid(id).then(res=>{
+        console.log(res.data);
+          setValue({
+            id:id,
+            courseName:res.data.courseName,
+            studentNumber:res.data.studentNumber,
+            courseduration:res.data.courseduration,
+            coursetiming:res.data.coursetiming,
+            courseDescription:res.data.courseDescription
+          });
+      })
+      .catch((error)=>{
+        console.log('Error - '+error);
+      });
+  },[])
   const assignValues = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -51,7 +48,7 @@ const EditCourse = (props) => {
   const submitting = (e) => {
     e.preventDefault();
     let state = {
-      courseId:valuee.courseId,
+      courseId:id,
       courseName: valuee.courseName,
       studentNumber: valuee.studentNumber,
       courseduration: valuee.courseduration,
@@ -59,12 +56,14 @@ const EditCourse = (props) => {
       courseDescription: valuee.courseDescription,
     };
     AddInstitute.push(state);
-    console.log(state);
-    console.log(valuee.courseId);
-    CourseService.editCourse(state,state.courseId).then(res=>{
+    // console.log(state);
+    // console.log(id);
+    // console.log(valuee.courseId);
+    // console.log(state.courseId);
+    CourseService.editCourse(state,id).then(res=>{
       history('/availablecourse');
     });
-    localStorage.setItem("addinstitutedata", JSON.stringify(AddInstitute));
+    // localStorage.setItem("addinstitutedata", JSON.stringify(AddInstitute));
     e.preventDefault();
   };
   return (
@@ -89,7 +88,7 @@ const EditCourse = (props) => {
               name="studentNumber"
               id="studenttNumber"
               placeholder="Enter Number of students"
-              value={valuee.studenttNumber}
+              value={valuee.studentNumber}
               onChange={assignValues}
             ></input>
             <br />
@@ -121,7 +120,7 @@ const EditCourse = (props) => {
             ></input>
             <br />
             <div className="form-btn">
-            <button className='button' onClick={()=>{alert()}}><span>{'Update'} </span></button>
+            <button className='button' onClick={()=>{alert('Course Updated')}}><span>{'Update'} </span></button>
             </div>
           </form>
         </div>

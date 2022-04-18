@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Button from "../../../web components/buttons/Button";
 import "./editInstitute.css";
 import Input from "../../../web components/input/Input";
+import InstituteService from "../../services/InstituteService";
+import { useNavigate, useParams } from "react-router-dom";
 
 const EditInstitute = () => {
+  const history=useNavigate();
+  const id=useParams();
+  // console.log(id);
+  const instid=id.instituteId;
+  // console.log(instid);
   const [valuee, setValue] = useState({
+    instituteId:instid,
     academyName: "",
     contactNumber: "",
     imageUrl: "",
@@ -12,6 +20,24 @@ const EditInstitute = () => {
     academyLocation: "",
     academyDescription: "",
   });
+  useEffect(()=>{
+    // console.log(instid);
+      InstituteService.getinstitutebyid(instid).then(res=>{
+        console.log(res.data);
+          setValue({
+            instituteId:instid,
+            academyName:res.data.academyName,
+            contactNumber:res.data.contactNumber,
+            imageUrl:res.data.imageUrl,
+            academyEmail:res.data.academyEmail,
+            academyLocation:res.data.academyLocation,
+            academyDescription:res.data.academyDescription,
+          });
+      })
+      .catch((error)=>{
+        console.log('Error - '+error);
+      });
+  },[])
   const assignValues = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -20,9 +46,11 @@ const EditInstitute = () => {
       [name]: value,
     });
   };
+
   let EditInstitute = [];
   const submitting = (e) => {
     let state = {
+      instituteId:instid,
       academyName: valuee.academyName,
       contactNumber: valuee.contactNumber,
       imageUrl: valuee.imageUrl,
@@ -32,7 +60,10 @@ const EditInstitute = () => {
     };
     EditInstitute.push(state);
     console.log(state);
-    localStorage.setItem("editinstitutedata", JSON.stringify(EditInstitute));
+    InstituteService.editInstitute(state,instid).then(res=>{
+      history('/institutepage');
+    })
+    // localStorage.setItem("editinstitutedata", JSON.stringify(EditInstitute));
     e.preventDefault();
   };
   return (
@@ -98,7 +129,7 @@ const EditInstitute = () => {
             ></input>
             <br />
             <div className="form-btn">
-            <button className='button' onClick={()=>{alert()}}><span>{'Update'} </span></button>
+            <button className='button' onClick={()=>{alert('Institute Updated')}}><span>{'Update'} </span></button>
             </div>
           </form>
         </div>

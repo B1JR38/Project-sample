@@ -8,6 +8,7 @@ import data from './data';
 import Navbar from '../../navbar/Navbar'
 import InstituteService from '../../admin/services/InstituteService';
 const InstitutePagee=()=>{
+    const history=useNavigate();
     const[institutes,setinstitutes]=useState([]);
     // const institutes={};
     const[filter,setfilter]=useState("");
@@ -26,6 +27,9 @@ const InstitutePagee=()=>{
     const dataSearch=institutes.filter((val)=>{
         return(val.academyName.includes(filter))
     })
+    const coursepage=(id)=>{
+        history('/user/availablecourse/'+id);
+    }
 
     // console.log(dataSearch);
     
@@ -46,10 +50,11 @@ const InstitutePagee=()=>{
                     <div>
                     <div className='card' key={item}>
                     <img className='img instimg' src={item.imageUrl} alt="Institute"/>
-                    <center><a href='/user/availablecourse'>{item.academyName}</a></center>
+                    <center><a style={{cursor:'pointer'}} onClick={()=>coursepage(item.instituteId)}>{item.academyName}</a></center>
                     <div className='rating'>
                         <p>Place:{item.academyLocation}</p>
-                        <Rating name="size-small" defaultValue={item.rating} size="small" />
+                        <p>id:{item.instituteId}</p>
+                        <Rating name="size-small" defaultValue={4} size="small" />
                     </div>
                     
                 </div>

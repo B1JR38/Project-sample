@@ -39,7 +39,7 @@ const AddInstitute = () => {
     InstituteService.addInstitute(state).then(res=>{
         history('/institutepage');
     });
-    localStorage.setItem("addinstitutedata", JSON.stringify(AddInstitute));
+    // localStorage.setItem("addinstitutedata", JSON.stringify(AddInstitute));
     e.preventDefault();
   };
   return (

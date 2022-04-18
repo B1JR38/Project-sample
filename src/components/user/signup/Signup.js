@@ -53,7 +53,7 @@ const Signup = () => {
     UserService.adduser(state).then(res=>{
         history('/user/login');
     })
-    localStorage.setItem('usersdata',JSON.stringify(users));
+    // localStorage.setItem('usersdata',JSON.stringify(users));
     event.preventDefault();
   }
   let navigate = useNavigate();
