@@ -51,7 +51,7 @@ const Signup = () => {
     users.push(state);
     console.log(state);
     AuthService.addadmin(state).then(res=>{
-        history('/login');
+        history('/admin/login');
     })
     // localStorage.setItem('usersdata',JSON.stringify(users));
     event.preventDefault();
@@ -89,12 +89,12 @@ const Signup = () => {
                 {valuee.password!==valuee.confirmPassword && <span className='pwd-validation'>{validation}</span>}
                 <div className="form-btn">
                     {/* <Button className="button" BtnName={"Submit"} value="submit" /> */}
-                    <button className='button' onClick={()=>{alert()}}><span>{'SignUp'} </span></button>
+                    <button className='button'><span>{'SignUp'} </span></button>
                 </div>
             </form>
             {/* <Button BtnName={"Submit"} state={state} /> */}
             <footer className='footer'>
-                <p>Already a user? <Link to='/login' className='link'>Login</Link></p>
+                <p>Already a user? <Link to='/admin/login' className='link'>Login</Link></p>
             </footer>
             </div>  
         </div>

@@ -88,7 +88,7 @@ const Signup = () => {
                 {valuee.password!==valuee.confirmPassword && <span className='pwd-validation'>{validation}</span>}
                 <div className="form-btn">
                 {/* <Button className="button" BtnName={"Submit"} value="submit" /> */}
-                <button className='button' onClick={()=>{alert()}}><span>{'SignUp'} </span></button>
+                <button className='button' ><span>{'SignUp'} </span></button>
                 </div>
             </form>
             {/* <Button BtnName={"Submit"} state={state} /> */}

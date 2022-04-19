@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {useNavigate} from 'react-router-dom';
+import {useNavigate,Link} from 'react-router-dom';
 import { FaEdit , FaTrash } from 'react-icons/fa';
 import StudentService from "../services/StudentService";
 import '../Students/student.css';
@@ -25,6 +25,11 @@ const Student=()=>{
     },[]);
     return(
         <div className="table-container">
+        <div className='Navbar2'>
+            <Link to='/institutepage' className='instnav'>Institutes</Link>
+            <Link to='/availablecourse' className='instnav'>Courses</Link>
+            <Link to='/student' className='instnav'>Students</Link>
+        </div>
             <h1 className="heading">Student Details</h1>
             <table className="table">
                 <thead>
