@@ -38,7 +38,7 @@ const Login = () => {
         seterror(error.message);
     })
 
-    // localStorage.setItem('usersdata',JSON.stringify(users));
+    localStorage.setItem('admindata',JSON.stringify(state));
     event.preventDefault();
   }
 

@@ -40,7 +40,7 @@ const UserLogin = () => {
         seterror(error.message);
     })
 
-    // localStorage.setItem('usersdata',JSON.stringify(users));
+    localStorage.setItem('usersdata',JSON.stringify(state));
     event.preventDefault();
   }
 
